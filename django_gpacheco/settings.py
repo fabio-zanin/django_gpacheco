@@ -40,6 +40,7 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
+    'widget_tweaks',
     'clientes.apps.ClientesConfig',
 ]
 
