@@ -1,0 +1,23 @@
+{%  extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+    {{ block.super }} Deletar
+{% endblock title %}
+
+{% block body %}
+<div class="container">    
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Deseja deletar o registro: {{ cliente.first_name }}</h1>
+            <form action="." method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Deletar</button>
+            </form>
+            <br/>
+            <a href="{% url 'clientes:cliente_list' %}" class="btn btn-primary btn-sm">Voltar</a>
+        </div>
+    </div>
+</div>    
+{% endblock body %}
