@@ -1,0 +1,24 @@
+{%  extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+    {{ block.super }} Seja Bem vindo
+{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <h1>Seja Bem vindo</h1>
+    <div class="row">
+        <div class="col-md-12">
+            {% if user.is_authenticated %}
+                Bem vindo {{ user.username }}!
+                <p><a href="{% url 'logout' %}" class="btn btn-primary btn-sm">Log Out</a></p>
+            {% else %}
+                <p>Realize o login</p>
+                <a href="{% url 'login' %}" class="btn btn-primary btn-sm">Log In</a>
+            {% endif %}
+        </div>
+    </div>
+</div>    
+{% endblock body %}

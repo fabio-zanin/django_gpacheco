@@ -5,6 +5,7 @@
 __pycache__
 db.sqlite3
 media
+*.sqlite3
 
 # Backup files # 
 *.bak 
@@ -49,7 +50,7 @@ coverage.xml
 .hypothesis/ 
 
 # Environments 
-# .env
+.env
 .venv 
 env/ 
 venv/ 
